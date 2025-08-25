@@ -19,4 +19,4 @@ let average = total / marksArray.length;
 
 console.log("Student:", student.name);
 console.log("Total Marks:", total);
-console.log("Average Marks:", average);
+console.log("Average Marks:", average)
