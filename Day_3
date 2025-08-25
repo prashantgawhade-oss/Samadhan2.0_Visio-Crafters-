@@ -1,0 +1,22 @@
+let student = {
+  name: "Gulshan",
+  marks: {
+    math: 85,
+    science: 90,
+    english: 78,
+    computer: 95
+  }
+};
+
+// Convert marks object into an array
+let marksArray = Object.values(student.marks);
+
+// Calculate total
+let total = marksArray.reduce((sum, mark) => sum + mark, 0);
+
+// Calculate average
+let average = total / marksArray.length;
+
+console.log("Student:", student.name);
+console.log("Total Marks:", total);
+console.log("Average Marks:", average);
