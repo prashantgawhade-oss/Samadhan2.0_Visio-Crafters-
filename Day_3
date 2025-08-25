@@ -1,20 +1,22 @@
-student = {
-    "name": "Gulshan",
-    "marks": {
-        "math": 85,
-        "science": 90,
-        "english": 78,
-        "computer": 95
-    }
-}
+let student = {
+  name: "Gulshan",
+  marks: {
+    math: 85,
+    science: 90,
+    english: 78,
+    computer: 95
+  }
+};
 
-# Convert marks dict into list
-marks_list = student["marks"].values()
+// Convert marks object into an array
+let marksArray = Object.values(student.marks);
 
-# Calculate total and average
-total = sum(marks_list)
-average = total / len(marks_list)
+// Calculate total
+let total = marksArray.reduce((sum, mark) => sum + mark, 0);
 
-print("Student:", student["name"])
-print("Total Marks:", total)
-print("Average Marks:", average)
+// Calculate average
+let average = total / marksArray.length;
+
+console.log("Student:", student.name);
+console.log("Total Marks:", total);
+console.log("Average Marks:", average);
