@@ -1,10 +1,40 @@
-// src/components/ProfileCard.jsx
-export default function ProfileCard({ name, bio, image }) {
+// src/App.jsx
+
+function ProfileCard({ name, bio, image }) {
   return (
-    <div className="card">
-      <img src={image} alt={name} width="120" style={{ borderRadius: "50%" }} />
+    <div style={{
+      border: "1px solid #ccc",
+      borderRadius: "12px",
+      padding: "16px",
+      maxWidth: "250px",
+      textAlign: "center",
+      margin: "20px auto",
+      boxShadow: "2px 2px 8px rgba(0,0,0,0.1)"
+    }}>
+      <img 
+        src={image} 
+        alt={name} 
+        width="120" 
+        style={{ borderRadius: "50%" }} 
+      />
       <h2>{name}</h2>
       <p>{bio}</p>
     </div>
   );
 }
+
+function App() {
+  return (
+    <div>
+      <h1 style={{ textAlign: "center" }}>My Profile</h1>
+      
+      <ProfileCard 
+        name="Gulshan Kushwaha" 
+        bio="B.Tech CSE Student | Learning React" 
+        image="https://via.placeholder.com/120" 
+      />
+    </div>
+  );
+}
+
+export default App;
